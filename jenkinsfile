@@ -5,7 +5,7 @@ pipeline {
         IMAGE_NAME = "myapp"
         IMAGE_TAG = "${BUILD_NUMBER}"
         CONTAINER_NAME = "myapp-container"
-        ANSIBLE_SSH_ID = "ubuntusshkey"
+        
     }
 
     stages {
