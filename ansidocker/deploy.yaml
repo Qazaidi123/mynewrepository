@@ -1,5 +1,5 @@
 ---
-   - name: Deploy Docker container on worker node
+   - name: Deploy Docker container on agent node
      hosts: worker
      become: true
 
