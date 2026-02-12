@@ -7,8 +7,8 @@
       image_name: myapp
       image_tag: latest
       container_name: myapp-container
-      container_port: 8080
-      host_port: 8080
+      container_port: 8081
+      host_port: 8081
 
      tasks:
 
@@ -25,13 +25,15 @@
        docker_container:
          name: "{{ container_name }}"
          state: stopped
-         ignore_errors: true
+         ignore_errors:true
+         
 
       - name: Remove existing container
         docker_container:
           name: "{{ container_name }}"
           state: absent
           ignore_errors: true
+          
 
       - name: Run new container
         docker_container:
