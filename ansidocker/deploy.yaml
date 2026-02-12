@@ -23,15 +23,15 @@
 
      - name: Stop existing container (if running)
        docker_container:
-          name: "{{ container_name }}"
-          state: stopped
-      	 ignore_errors: true
+         name: "{{ container_name }}"
+         state: stopped
+         ignore_errors: true
 
       - name: Remove existing container
         docker_container:
           name: "{{ container_name }}"
           state: absent
-      	 ignore_errors: true
+          ignore_errors: true
 
       - name: Run new container
         docker_container:
