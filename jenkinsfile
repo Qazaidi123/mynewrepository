@@ -18,8 +18,8 @@ pipeline {
         stage('Deploy via Ansible Plugin') {
             steps {
                 ansiblePlaybook(
-                    playbook: 'ansible/deploy.yaml',
-                    inventory: 'ansible/hosts.ini',
+                    playbook: 'ansidocker/deploy.yaml',
+                    inventory: 'ansidocker/hosts.ini',
                     credentialsId: '${ANSIBLE_SSH_ID}',
                     extras: """
                       --extra-vars '{"image_name":"${IMAGE_NAME}","image_tag":"${IMAGE_TAG}","container_name":"${CONTAINER_NAME}"}'
