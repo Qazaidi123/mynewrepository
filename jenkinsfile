@@ -18,7 +18,7 @@ pipeline {
         stage('Deploy via Ansible Plugin') {
             steps {
                 ansiblePlaybook(
-                    playbook: 'ansible/deploy.yml',
+                    playbook: 'ansible/deploy.yaml',
                     inventory: 'ansible/hosts.ini',
                     credentialsId: '${ANSIBLE_SSH_ID}',
                     extras: """
