@@ -4,11 +4,11 @@
      become: true
 
      vars:
-     image_name: myapp
-     image_tag: latest
-     container_name: myapp-container
-     container_port: 8080
-     host_port: 8080
+      image_name: myapp
+      image_tag: latest
+      container_name: myapp-container
+      container_port: 8080
+      host_port: 8080
 
      tasks:
 
@@ -25,19 +25,19 @@
        docker_container:
           name: "{{ container_name }}"
           state: stopped
-      	  ignore_errors: true
+      	 ignore_errors: true
 
       - name: Remove existing container
-      	docker_container:
+        docker_container:
           name: "{{ container_name }}"
           state: absent
-      	  ignore_errors: true
+      	 ignore_errors: true
 
       - name: Run new container
-      	docker_container:
-        name: "{{ container_name }}"
-        image: "{{ image_name }}:{{ image_tag }}"
-        state: started
-        restart_policy: always
-        ports:
+        docker_container:
+         name: "{{ container_name }}"
+         image: "{{ image_name }}:{{ image_tag }}"
+         state: started
+         restart_policy: always
+         ports:
           - "{{ host_port }}:{{ container_port }}"
