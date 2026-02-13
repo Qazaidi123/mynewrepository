@@ -4,9 +4,9 @@
   become: true
 
   vars:
-    image_name: myapp
+    image_name: pythonimage
     image_tag: latest
-    container_name: myapp-container
+    container_name: pythoncontainer
     container_port: 8081
     host_port: 8081
 
