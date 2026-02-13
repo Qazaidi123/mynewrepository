@@ -12,7 +12,7 @@ def about_institute():
     return {
         "about":"Netligent IT solutions provide the quality and most demanding courses in IT industry"
     }
-@myapp.get("/Courses")
+@myapp.get("/courses")
 def courses():
     return {
         "courses":[
@@ -23,7 +23,7 @@ def courses():
             "Data Analytics"
         ]
     }    
-@myapp.get("/contac")
+@myapp.get("/contact")
 def contact():
     return {
         "address":"Building 4, 2nd Floor, Krishak nagar, karond, Bhopal"
