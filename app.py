@@ -27,7 +27,9 @@ def courses():
 def contact():
     return {
         "address":"Building 4, 2nd Floor, Krishak nagar, karond, Bhopal"
-    }    
+    }
+if __name__ == "__main__":
+    uvicorn.run(myapp, host="0.0.0.0", port=8081)    
            
            
 
