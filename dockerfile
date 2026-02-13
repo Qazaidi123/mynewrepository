@@ -3,6 +3,6 @@ WORKDIR /app
 RUN pip install --no-cache-dir fastapi uvicorn[standard]
 COPY app.py .
 EXPOSE 8081
-CMD ["uvicorn","app:myapp","host","0.0.0.0","--port","8081"]
+CMD ["uvicorn","app:myapp","--host","0.0.0.0","--port","8081"]
 
 
