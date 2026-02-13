@@ -1,10 +1,10 @@
 pipeline {
-    agent { label 'netligent' }
+    agent { label "${params.LABEL_NAME}" }
 
     environment {
-        IMAGE_NAME = "myapp"
+        IMAGE_NAME = "pythonimage"
         IMAGE_TAG = "${BUILD_NUMBER}"
-        CONTAINER_NAME = "myapp-container"
+        CONTAINER_NAME = "pythoncontainer"
         
     }
 
