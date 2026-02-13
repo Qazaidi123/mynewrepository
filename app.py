@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 myapp=FastAPI()
-@myapp.get('/")
+@myapp.get("/")
 def homepage():
     return {
         "School":"Netligent IT Solutions",
